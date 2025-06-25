@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="icon" href="./images/bookmark.png">
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="main ">
+
+    <div class="container py-5">
+      <div class="outer d-flex flex-column ">
+        <h1 class="align-self-center">Bookmarker</h1>
+
+        <div class="inner my-4 d-flex flex-column justify-content-center ">
+          <h2 class="fs-2 text-center"><i class="fas fa-bookmark"></i> Bookmark your favorite sites <i
+              class="fas fa-bookmark"></i></h2>
+
+          <div class="mb-4">
+            <label class="mb-2" for="siteName"><i class="fa-solid fa-book-bookmark "></i> Site Name</label>
+            <input type="text" placeholder="Bookmark Name" class="form-control" id="siteName">
+          </div>
+
+          <div class="mb-4">
+            <label class="mb-2" for="siteUrl"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input type="url" placeholder="Website URL" class="form-control" id="siteUrl">
+          </div>
+
+          <button onclick="handleAddSite()" type="button"
+            class="btn btn-submit d-inline-block align-self-center px-5">Submit</button>
+
+        </div>
+      </div>
+
+      <table class="table text-center align-middle">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+
+        <tbody id="tableData">
+          <!-- <tr>
+          <td>0</td>
+          <td>facebook</td>
+          <td><button class="btn btn-outline-warning mb-2 fs-4"><a href=""></a></button></td>
+          <td><button class="btn btn-outline-danger mb-2 fs-4" >Delete</button></td>
+          </tr> -->
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+  <div class="modal " id="rulesModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header m-3 mb-0 border-0">
+          <div class="colored-cirlcles d-flex ">
+            <div class="circle m-1"></div>
+            <div class="circle m-1"></div>
+            <div class="circle m-1"></div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+          <ul class="list-unstyled rules">
+            <li><i class="fa-regular fa-circle-right p-2"></i> Site name must contain at least 3 characters</li>
+            <li><i class="fa-regular fa-circle-right p-2"></i> Site URL must be a valid one</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
